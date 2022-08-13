@@ -6,7 +6,8 @@
   --text-color: #757575;
   --elements-color: #ffff;
   --backfround-non-active-button: #f5f4fa;
-  --backfround-active-button: #2196f3;
+  --backfround-active-button: #188ce8;
+  --background-button: #2196f3;
 }
 .list {
   list-style: none;
@@ -25,10 +26,24 @@ button {
 /*body*/
 body {
   font-family: var(--primery-font);
-  background: #ffffff;
+  background: #ffff;
   color: var(--text-color);
+  font-size: 14px;
+  letter-spacing: 0.03em;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /*header*/
 .studio-logo,
 .studio-logo-style,
@@ -38,18 +53,15 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
 }
-.studio-logo,
-.footer-logo {
+.current {
   color: var(--accent-color);
 }
 .studio-logo:hover,
 .footer-logo:hover,
 .studio-logo:focus,
 .footer-logo:focus {
-  text-decoration: underline;
-  outline-color: var(--accent-color);
+  color: var(--accent-color);
 }
 .studio-logo-style {
   color: #000000;
@@ -60,7 +72,6 @@ body {
 .navigation-link,
 .contacts-list-item {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
@@ -71,6 +82,7 @@ body {
 .navigation-link:focus {
   color: var(--accent-color);
 }
+
 .contacts-list-item {
   color: var(--text-color);
 }
@@ -99,27 +111,22 @@ body {
   letter-spacing: 0.06em;
   border: none;
   color: var(--elements-color);
-  background-color: #2f303a;
+  background-color: var(--background-button);
 }
 .service-order-button:hover,
 .service-order-button:focus {
-  font-family: inherit;
-  background-color: var(--accent-color);
+  background-color: var(--backfround-active-button);
 }
 /*features*/
 .feartures-title-name {
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--names-color);
 }
 .features-discription {
   font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
 }
 /*service list & our team*/
 .services-title,
@@ -128,7 +135,6 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--names-color);
 }
 .our-team {
@@ -138,14 +144,12 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
   color: var(--names-color);
 }
 .person-position {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.16;
-  letter-spacing: 0.03em;
 }
 /*footer*/
 .footer-page {
@@ -161,9 +165,7 @@ address {
   font-family: inherit;
   font-weight: 400;
   font-style: normal;
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
 }
 .address-map {
   color: var(--elements-color);
@@ -189,7 +191,6 @@ address {
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
-  letter-spacing: 0.03em;
   border: none;
   background-color: var(--backfround-non-active-button);
   color: var(--names-color);
@@ -212,6 +213,5 @@ address {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88x;
-  letter-spacing: 0.03em;
   color: var(--text-color);
 }
